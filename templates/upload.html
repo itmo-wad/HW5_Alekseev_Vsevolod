@@ -1,0 +1,24 @@
+<!doctype html>
+<title>File Upload</title>
+<h2>Select a file to upload</h2>
+<p>
+		<ul>
+		  <li>Please upload your user image!</li>
+		</ul>
+</p>
+
+Image:
+	<div>
+		<img src="{{ url_for('display_image', filename=filename) }}">
+	</div>
+
+<form method="post" action="/cabinet" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
